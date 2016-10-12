@@ -19,7 +19,6 @@ for (let prop of files) {
  let fileStats = await fs.stat(dir + '/' +prop)
  if ( await fileStats.isDirectory() )
     {
-     console.log('Dir Found' + dir + '/' +prop)
      dirs.push(dir + '/' +prop)
    searchFiles(dir +'/'+ prop)
     
@@ -27,11 +26,9 @@ for (let prop of files) {
 else
 {
   await fs.unlink(dir + '/' +prop)
-  console.log(dir + '/' + prop+ 'file Only')   
 }
 }
 catch (err) {
-   console.log(dir + '/' + prop + 'etc')
    await fs.unlink(dir + '/' +prop)
 }
 }

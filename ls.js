@@ -32,5 +32,4 @@ async function ls() {
     searchFiles(inputs)
 }
 
-//ls()
-exports.ll = (dir) => searchFiles(dir)
+ls()
