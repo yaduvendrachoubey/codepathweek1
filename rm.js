@@ -5,7 +5,6 @@ let fs = require('fs').promise
 let dirs = []
 
 async function rmfileDir(fileOrDir) {
-    //console.log(fileOrDir)
     while(fileOrDir.length > 0) {
     await fs.rmdir(fileOrDir.pop())
    }
@@ -13,8 +12,9 @@ async function rmfileDir(fileOrDir) {
 
 async function searchFiles(dir) {
 // Is the Directory
-let files = await fs.readdir(dir)
-for (let prop of files) {
+	dirs.push(dir)
+	let files = await fs.readdir(dir)
+	for (let prop of files) {
  try {
  let fileStats = await fs.stat(dir + '/' +prop)
  if ( await fileStats.isDirectory() )
