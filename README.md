@@ -27,4 +27,4 @@ Time spent: `<Number of hours spent>`
 ## Walkthrough Gif:
 
 `<Add your Walkthrough Gif here (by updating the image URL)>`
-![Video Walkthrough](...)
+![Video Walkthrough](https://github.com/yaduvendrachoubey/codepathweek1/blob/master/projectwalkthroughweek1.gif)
